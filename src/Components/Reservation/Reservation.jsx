@@ -1,34 +1,29 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
-import PopUpReservation from "./PopUpReservation";
-import "./Reservation.css";
-import { useState } from "react";
+import React from 'react'
+import Navbar from '../Navbar/Navbar'
+import PopUpReservation from './PopUpReservation'
+import { useState } from 'react'
+import checkViolet from '../../assets/logos/check-violet.png'
+import purpleCloud from '../../assets/images/purple.cloud.png'
+import './Reservation.css'
 
 const Reservation = () => {
-  const [newPopop, setNewPopop] = useState(false);
+  const [newPopop, setNewPopop] = useState(false)
 
   const handleClick = () => {
     setNewPopop(!newPopop)
-  };
+  }
   return (
     <div>
       <Navbar />
       <div className="titleBlock">
-        <img
-          className="check_panier-reservation"
-          src="src/assets/logos/check-violet.png"
-        />
+        <img className="check_panier-reservation" src={checkViolet} />
         <h1 className="reservation__title">
-          Prêt(e) pour l`aventure de votre vie?{" "}
-        </h1>{" "}
+          Prêt(e) pour l`aventure de votre vie?{' '}
+        </h1>{' '}
         <h1 className="reservation__title"> Réservez-la ici !</h1>
       </div>
       <div className="intro__reservation">
-        <img
-          className="purple_cloud"
-          src="/src/assets/images/purple.cloud.png"
-          alt="purple round"
-        />
+        <img className="purple_cloud" src={purpleCloud} alt="purple round" />
       </div>
       <div className="general__contact">
         <div className="contact__section1">
@@ -114,7 +109,7 @@ const Reservation = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Reservation;
+export default Reservation
